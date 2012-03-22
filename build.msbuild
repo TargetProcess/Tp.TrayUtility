@@ -1,0 +1,42 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="Clean" DefaultTargets="build">
+	<PropertyGroup>
+		<Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+		<TpTrayDir>src</TpTrayDir>
+		<TpTrayOutput>$(TpTrayDir)\bin\$(Configuration)</TpTrayOutput>
+		<TpTrayIncludeFiles>$(TpTrayDir)\IncludeFiles</TpTrayIncludeFiles>
+		<TpTrayNsisFile>$(TpTrayDir)\tptray.nsi</TpTrayNsisFile>
+		
+		<ProgramFiles32>$(MSBuildExtensionsPath32)\..</ProgramFiles32>
+		<MakeNsis Condition="'$(MakeNsis)' == ''">"$(ProgramFiles32)\Nsis\makensis.exe"</MakeNsis>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<TpTrayProj Include="$(TpTrayDir)\Tp.TrayUtility.csproj" />		
+		<TpTraySolution Include="Tp.TrayUtility.sln" />
+	</ItemGroup>
+	
+	<Target Name="Clean">
+		<MSBuild Projects="@(TpTraySolution)" Targets="Clean"/>
+	</Target>
+	
+	<Target Name="build" DependsOnTargets="GetVersion">
+		<RemoveDir Directories="$(TpTrayOutput)" />
+
+		<Message Text="Revision=$(Version)" Importance="high" />
+
+		<MSBuild Projects="@(TpTrayProj)" Targets="build" Properties="Configuration=$(Configuration);">
+		</MSBuild>
+
+		<CreateProperty Value="..\TPTRAY-setup.exe">
+			<Output TaskParameter="Value" PropertyName="TpTraySetupFile" />
+		</CreateProperty>
+
+		<Exec Command="$(MakeNsis) /DVERSION=$(Version) /DOUTFILE=$(TpTraySetupFile) /DCONFIGURATION=$(Configuration) &quot;$(TpTrayNsisFile)&quot; " />
+	</Target>
+	
+	<Target Name="GetVersion">	
+		<CreateProperty Value="2.23.1.15001">
+			<Output TaskParameter="Value" PropertyName="Version" />
+		</CreateProperty>
+	</Target>
+</Project>

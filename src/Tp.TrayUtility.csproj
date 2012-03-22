@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0CB47F3-143C-4B94-B850-018076446794}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TpTrayUtility</RootNamespace>
+    <AssemblyName>TpTray</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <ApplicationIcon>bugLarge.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/TpTray/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\TpTray.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\TpTray.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'FuncTests|AnyCPU' ">
+    <OutputPath>bin\FuncTests\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'FuncTests|x64' ">
+    <OutputPath>bin\x64\FuncTests\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'FuncTests|x86' ">
+    <OutputPath>bin\x86\FuncTests\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Services3">
+      <HintPath>..\libs\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tp.Service.Proxies">
+      <HintPath>..\libs\Tp.Service.Proxies.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutTPUBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutTPUBox.Designer.cs">
+      <DependentUpon>AboutTPUBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedTextEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvancedTextEditor.Designer.cs">
+      <DependentUpon>AdvancedTextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Controls\ImageViewPortEditArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\TpScrollPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DecoratedTextBoxEditModePropertyControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DecoratedTextBoxPropertyControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FontFamilyCollection.cs" />
+    <Compile Include="Components\GDI32.cs" />
+    <Compile Include="Components\SelectedAlignmentDictionary.cs" />
+    <Compile Include="Components\SelectedDictionary.cs" />
+    <Compile Include="Components\SelectedFontStyleDictionary.cs" />
+    <Compile Include="Components\MyDropDownList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Primitive.cs" />
+    <Compile Include="Components\StatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\StatusForm.Designer.cs">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Tools\BitmapWrapper.cs" />
+    <Compile Include="Components\Tools\Utils.cs" />
+    <Compile Include="Components\TpList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpRichText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpSecureForms\ITpSecureForm.cs" />
+    <Compile Include="Components\TpSecureForms\TpSecureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\TpSecureForms\TpSecureFormManager.cs" />
+    <Compile Include="Components\TpSecureForms\TpSecureSimpleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\TpTextItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpTopMostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\User32.cs" />
+    <Compile Include="Controls\TpComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TpComboBoxLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MessageForm.cs" />
+    <Compile Include="SubmitBug\AttachmentControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubmitBug\AttachmentControlItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubmitBug\AttachmentControlScrollButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubmitBug\AttachmentControlToolButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Events\MessageEventArgs.cs" />
+    <Compile Include="TPEMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TPEMain.Designer.cs">
+      <DependentUpon>TPEMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Arrow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\AssignmentData.cs" />
+    <Compile Include="Components\AssignmentRetreiver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\AssignmentRetreiverEventArgs.cs" />
+    <Compile Include="Components\AssignmentsManager.cs" />
+    <Compile Include="Components\Box.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ButtonType.cs" />
+    <Compile Include="Components\ChangeColorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DecoratedTextBox.cs" />
+    <Compile Include="Components\EncodingType.cs" />
+    <Compile Include="Components\Messenger.cs" />
+    <Compile Include="Components\FormsManager.cs" />
+    <Compile Include="Components\FreeLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\GlobalMouseHandler.cs" />
+    <Compile Include="Components\GlobalMouseHook.cs" />
+    <Compile Include="Components\Helpers.cs" />
+    <Compile Include="Components\ImageLibrary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ImageViewPort.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Line.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\NavigationControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\NotificationType.cs" />
+    <Compile Include="Components\Picture.cs" />
+    <Compile Include="Components\PicturePropertyControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\PropertyControlBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\RoundedRectangle.cs" />
+    <Compile Include="Components\SelectionTool.cs" />
+    <Compile Include="Components\SelectionToolPropertyControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ShadowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\ShapeBoxControl.cs" />
+    <Compile Include="Components\ShapeBoxControlPoint.cs" />
+    <Compile Include="Components\TogleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ToolControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpAuthenticationManager.cs" />
+    <Compile Include="Components\DashboardManager.cs" />
+    <Compile Include="Components\IAuthProvider.cs" />
+    <Compile Include="Components\ServiceManager.cs" />
+    <Compile Include="Components\SettingsManager.cs" />
+    <Compile Include="Components\TpBaseButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpCloseButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\TpItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpMaxiMiniButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TPPopupNotifierManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\TpServicePolicy.cs" />
+    <Compile Include="Components\TpTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpTool.cs" />
+    <Compile Include="Components\TpToolButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TpVerticalSeporator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\UI.cs" />
+    <Compile Include="Components\Utility.cs" />
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotKey.cs">
+    </Compile>
+    <Compile Include="HotKeyControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HotKeyControl.Designer.cs">
+      <DependentUpon>HotKeyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Magnify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Magnify.Designer.cs">
+      <DependentUpon>Magnify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\IPrimitive.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WpfControls\WpfComboBox.xaml.cs">
+      <DependentUpon>WpfComboBox.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutTPUBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutTPUBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedTextEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdvancedTextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\StatusForm.resx">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPEMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TPEMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotKeyControl.resx">
+      <DependentUpon>HotKeyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Magnify.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Magnify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RedefineHotKeys.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RedefineHotKeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SecurityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SimpleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubmitBugForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SubmitBugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeDescriptionForm.resx">
+      <DependentUpon>TimeDescriptionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToDoList.resx">
+      <DependentUpon>ToDoList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RedefineHotKeys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RedefineHotKeys.Designer.cs">
+      <DependentUpon>RedefineHotKeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityForm.Designer.cs">
+      <DependentUpon>SecurityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimpleEditor.Designer.cs">
+      <DependentUpon>SimpleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubmitBugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubmitBugForm.Designer.cs">
+      <DependentUpon>SubmitBugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeDescriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeDescriptionForm.Designer.cs">
+      <DependentUpon>TimeDescriptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToDoList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToDoList.Designer.cs">
+      <DependentUpon>ToDoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\TpScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bugLarge.ico" />
+    <None Include="icons\background_task.bmp" />
+    <Content Include="icons\bug.bmp" />
+    <Content Include="icons\bugBig.bmp" />
+    <None Include="icons\close.bmp" />
+    <Content Include="icons\drop1.bmp" />
+    <Content Include="icons\drop2.bmp" />
+    <Content Include="icons\drop3.bmp" />
+    <Content Include="icons\pencil.bmp" />
+    <Content Include="icons\pencil_color.bmp" />
+    <Content Include="icons\save.bmp" />
+    <Content Include="icons\select.bmp" />
+    <Content Include="icons\select_font.bmp" />
+    <Content Include="icons\text.bmp" />
+    <Content Include="icons\text_color.bmp" />
+    <EmbeddedResource Include="icons\toolFreeLine.bmp" />
+    <Content Include="icons\topBanner.bmp" />
+    <None Include="icons\TpHeaderIcon.bmp" />
+    <Content Include="icons\undo.bmp" />
+    <Content Include="IncludeFiles\files\4.gif" />
+    <Content Include="IncludeFiles\files\5.gif" />
+    <Content Include="IncludeFiles\files\8.gif" />
+    <Content Include="IncludeFiles\files\clock.gif" />
+    <Content Include="IncludeFiles\files\Empty.htm" />
+    <Content Include="IncludeFiles\files\Error.htm" />
+    <Content Include="IncludeFiles\files\Main.css" />
+    <Content Include="IncludeFiles\files\ToDo.js" />
+    <Content Include="IncludeFiles\files\Transformation.xslt" />
+    <None Include="Resources\b-hover.png" />
+    <None Include="Resources\b-normal.png" />
+    <None Include="Resources\b-press.png" />
+    <None Include="Resources\i-hover.png" />
+    <None Include="Resources\i-normal.png" />
+    <None Include="Resources\i-press.png" />
+    <None Include="Resources\close-hover.png" />
+    <None Include="Resources\close-press.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\hide-hover.png" />
+    <None Include="Resources\hide-press.png" />
+    <None Include="Resources\hide.png" />
+    <None Include="logo.bmp" />
+    <None Include="Resources\checkbox-off.png" />
+    <None Include="Resources\checkbox-on.png" />
+    <None Include="Resources\cicle-tool.png" />
+    <None Include="Resources\icon-hover.png" />
+    <None Include="Resources\icon-pressed.png" />
+    <None Include="Resources\curve-tool.png" />
+    <Content Include="Resources\Icon.ico" />
+    <None Include="Resources\scrolldown.PNG" />
+    <None Include="Resources\scrollup.PNG" />
+    <None Include="Resources\select-big1.png" />
+    <None Include="Resources\text-tool.png" />
+    <None Include="Resources\pointer-tool.png" />
+    <None Include="Resources\line-tool.png" />
+    <None Include="Resources\square-tool.png" />
+    <None Include="Resources\tp-logo.png" />
+    <None Include="Resources\logo.bmp" />
+    <None Include="Resources\maximize.png" />
+    <None Include="Resources\maximize-press.png" />
+    <None Include="Resources\maximize-hover.png" />
+    <None Include="Resources\slide.png" />
+    <None Include="Resources\select-tool-mono.cur" />
+    <None Include="Resources\line-text-tool-mono.cur" />
+    <None Include="Resources\select-tool.cur" />
+    <None Include="Resources\line-text-tool.cur" />
+    <None Include="Resources\select-tool.png" />
+    <None Include="Resources\u-press.png" />
+    <None Include="Resources\u-normal.png" />
+    <None Include="Resources\u-hover.png" />
+    <None Include="Resources\tr-press.png" />
+    <None Include="Resources\tr-normal.png" />
+    <None Include="Resources\tr-hover.png" />
+    <None Include="Resources\tl-press.png" />
+    <None Include="Resources\tl-normal.png" />
+    <None Include="Resources\tl-hover.png" />
+    <None Include="Resources\tc-press.png" />
+    <None Include="Resources\tc-normal.png" />
+    <None Include="Resources\tc-hover.png" />
+    <None Include="Resources\tp.ico" />
+    <None Include="Resources\%24this.Icon.ico" />
+    <None Include="Resources\select-small-press-top.png" />
+    <None Include="Resources\select-small-press-bottom.png" />
+    <None Include="Resources\select-small-hover-top.png" />
+    <None Include="Resources\select-small-hover-bottom.png" />
+    <None Include="Resources\1x1.png" />
+    <None Include="Resources\TranspBack.png" />
+    <None Include="Resources\select-small.png" />
+    <None Include="Resources\select-color.png" />
+    <None Include="Resources\select-big.png" />
+    <None Include="Resources\undo.png" />
+    <None Include="Resources\send-bug.png" />
+    <None Include="Resources\select-icon-bg.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\redo.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\original-size.png" />
+    <None Include="Resources\new-capture.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\free-line-tool.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\notifyIcon1.Icon.ico" />
+    <None Include="Resources\tp-16x16.png" />
+    <None Include="Resources\resize-pressed.png" />
+    <None Include="Resources\resize-hover.png" />
+    <None Include="Resources\resize-default.png" />
+    <None Include="Resources\hide-pressed.png" />
+    <None Include="Resources\hide-default.png" />
+    <None Include="Resources\close-pressed.png" />
+    <None Include="Resources\close-default.png" />
+    <None Include="Resources\horizontal.png" />
+    <None Include="Resources\vertical.png" />
+    <None Include="Resources\IconMessage.ico" />
+    <None Include="Resources\ToolFreeLine.bmp" />
+    <None Include="Resources\TopBanner.bmp" />
+    <None Include="Resources\Close.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WpfControls\scrollbar_Images\Layer 106 copy.png" />
+    <Resource Include="WpfControls\scrollbar_Images\Layer 106.png" />
+    <Resource Include="WpfControls\scrollbar_Images\Layer 110.png" />
+    <Resource Include="WpfControls\scrollbar_Images\Layer 111.png" />
+    <Resource Include="WpfControls\scrollbar_Images\Layer 112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="WpfControls\WpfComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(TargetDir)files"
+copy "$(ProjectDir)\IncludeFiles\files" "$(TargetDir)files"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
