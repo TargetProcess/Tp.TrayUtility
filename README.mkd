@@ -1,4 +1,4 @@
-Tp Tray
+Tp Tray installation
 =======================
 
-Run build.bat to create install executable file. It would be placed in the root of Tp.TrayUtility folder and have name TPTRAY-setup.exe.
+Run build.bat to create install file TPTRAY-setup.exe in the root of Tp.TrayUtility folder.
