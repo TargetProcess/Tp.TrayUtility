@@ -13,7 +13,7 @@ Next, you are able to merge several screenshots into one image and edit it as re
 
 ![Edit screenshots](https://raw.github.com/TargetProcess/Tp.TrayUtility/master/imgs/tp_tray_3.jpg)
 
-It also provide instant notifications about events in TargetProcess and My ToDo list
+It also provide instant notifications about events in TargetProcess and My ToDo list.
 
 How To Install Tp Tray
 ----------------------------------
