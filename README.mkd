@@ -1,4 +1,21 @@
-Tp Tray installation
+Tp Tray
 =======================
+
+It is a small windows-based application that helps you to capture screenshots and post bugs into TargetProcess really fast. In fact it is a free screen capture utility with basic functionality and integration with TargetProcess.
+
+![Make screenshot](https://raw.github.com/TargetProcess/Tp.TrayUtility/master/imgs/tp_tray_1.jpg)
+
+It is possible to capture several screenshots and store them in a library for future use.
+
+![Capture and save screenshots](https://raw.github.com/TargetProcess/Tp.TrayUtility/master/imgs/tp_tray_2.jpg)
+
+Next, you are able to merge several screenshots into one image and edit it as required. You can also add annotations and some graphic elements.
+
+![Edit screenshots](https://raw.github.com/TargetProcess/Tp.TrayUtility/master/imgs/tp_tray_3.jpg)
+
+It also provide instant notifications about events in TargetProcess and My ToDo list
+
+How To Install Tp Tray
+----------------------------------
 
 Run build.bat to create install file TPTRAY-setup.exe in the root of Tp.TrayUtility folder.
