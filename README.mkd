@@ -9,7 +9,7 @@ It is possible to capture several screenshots and store them in a library for fu
 
 ![Capture and save screenshots](https://raw.github.com/TargetProcess/Tp.TrayUtility/master/imgs/tp_tray_2.jpg)
 
-Next, you are able to merge several screenshots into one image and edit it as required. You can also add annotations and some graphic elements.
+Next, you are able to merge several screenshots into one image and edit it as required. You can also add annotations and some graphical elements.
 
 ![Edit screenshots](https://raw.github.com/TargetProcess/Tp.TrayUtility/master/imgs/tp_tray_3.jpg)
 
