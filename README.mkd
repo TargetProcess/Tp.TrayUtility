@@ -5,11 +5,11 @@ It is a small windows-based application that helps you to capture screenshots an
 
 ![Tp Tray](https://raw.github.com/TargetProcess/Tp.TrayUtility/master/imgs/qa-submit.png)
 
-You can make screenshot.
+You can easyly make screenshots via Tp Tray.
 
 ![Make screenshot](https://raw.github.com/TargetProcess/Tp.TrayUtility/master/imgs/tp_tray_1.jpg)
 
-It is possible to capture several screenshots and store them in a library for future use.
+It provideis possible to capture several screenshots and store them in a library for future use.
 
 ![Capture and save screenshots](https://raw.github.com/TargetProcess/Tp.TrayUtility/master/imgs/tp_tray_2.jpg)
 
@@ -17,7 +17,7 @@ Next, you are able to merge several screenshots into one image and edit it as re
 
 ![Edit screenshots](https://raw.github.com/TargetProcess/Tp.TrayUtility/master/imgs/tp_tray_3.jpg)
 
-It also provide instant notifications about events in TargetProcess and My ToDo list.
+It also provides instant notifications about events in TargetProcess and My ToDo list.
 
 How To Install Tp Tray
 ----------------------------------
